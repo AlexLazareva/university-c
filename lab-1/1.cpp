@@ -26,7 +26,7 @@ main() {
             break;
 
         default:
-            printf("Ошибка /n");
+            printf("Ошибка \n");
             exit(1);
         }
         printf("Результат:%f\n",rez);
