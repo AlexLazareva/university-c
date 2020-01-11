@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include<conio.h>
 #define PROMPT ':'
 
 main() {
@@ -29,7 +30,7 @@ main() {
             printf("Ошибка \n");
             exit(1);
         }
-        printf("Результат:%f\n",rez);
+        printf("Результат:%f\n", rez);
     }
     
 }
