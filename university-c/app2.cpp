@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-main() {
+void main() {
     float x, y, z;
 
     printf("Задайте х: ");
@@ -16,5 +16,5 @@ main() {
     y = 2 * z;
     
     printf("Результат:%f\n", y);
-
+    exit(0);
 }

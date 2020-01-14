@@ -3,7 +3,7 @@
 #include<conio.h>
 #define PROMPT ':'
 
-main() {
+void main() {
     float a,b,rez;
     char oper;
 
@@ -11,18 +11,18 @@ main() {
     {
         switch (oper)
         {
-        case '+':
+        case "+":
             rez=a+b;
             break;
 
-        case '-':
+        case "-":
             rez=a-b;
             break;
         
-        case '*':
+        case "*":
             rez=a*b;
             break;
-        case '/':
+        case "/":
             rez=a/b;
             break;
 
