@@ -2,19 +2,31 @@
 #include <stdlib.h>
 #include <math.h>
 
-void main() {
-    float x, y, z;
+int main() {
+    float x, y, x2;
+    float sum = 0;
+    int n = 0;
 
-    printf("Задайте х: ");
-    scanf("%d", &x);
+    printf("Enter x: ");
+    scanf("%f", &x);
 
-    for (int i = 1; i < x; i++)
-    {
-        z = 1 / (i*pow(x,i));
+    printf("Enter n: ");
+    scanf("%d", &n);
+
+    if (x != 0) {
+
+        for (int i = 0; i < n; i++)
+        {
+            x2 = x*x;
+
+            sum += 1 /((2*n + 1) * x2);
+        }
+
+        printf("Result is:%f\n", sum);
+
+        exit(0);
+    } else {
+        printf("x must be not equal 0\n");
+        exit(1);
     }
-    
-    y = 2 * z;
-    
-    printf("Результат:%f\n", y);
-    exit(0);
 }

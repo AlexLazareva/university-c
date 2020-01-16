@@ -3,7 +3,7 @@
 #include<conio.h>
 #define PROMPT ':'
 
-void main() {
+int main() {
     float a,b,rez;
     char oper;
 
@@ -11,26 +11,27 @@ void main() {
     {
         switch (oper)
         {
-        case "+":
+        case '+':
             rez=a+b;
             break;
 
-        case "-":
+        case '-':
             rez=a-b;
             break;
-        
-        case "*":
+
+        case '*':
             rez=a*b;
             break;
-        case "/":
+
+        case '/':
             rez=a/b;
             break;
 
         default:
-            printf("Ошибка \n");
+            printf("Error \n");
             exit(1);
         }
-        printf("Результат:%f\n", rez);
+        printf("Result is: %f\n", rez);
+        exit(0);
     }
-    
 }
