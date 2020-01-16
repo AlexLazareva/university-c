@@ -24,22 +24,21 @@ const int size = 10;
 // эхо-печать массива
 cout << "Entered array is" << endl;
 
- for (i=0; i<size; i++){
+ for (i=0; i < size; i++){
     cout << i << " " << setprecision(3) << arr[i] << endl;
  }
 
 // поиск минимального элемента
     for (i=0, min=arr[0]; i<size; i++)
-        if (arr[i]<min)
+        if (arr[i] < min)
             min = arr[i];
 
 // поиск первого положительного элемента
-    for (i=0; i<size && arr[i]<=0; i++);
+    for (i=0; i < size && arr[i] <= 0; i++);
     sum = 0; // если нет вообще положительных элементов
 
 //поиск последнего положительного элемента
-    if ((i<size-2) && (arr[i]>0)) // а есть ли смысл?
-    {
+    if ((i<size-2) && (arr[i]>0)) {
         for (j=size-1; j>=0 && arr[j]<=0; j--);
         if ((arr[j]>0) && (--j>i))
             while (j>i){
@@ -49,8 +48,7 @@ cout << "Entered array is" << endl;
     }
 
     for (i=j=size-1; i>=0;--i){
-        if (arr[i]!=0)
-        {
+        if (arr[i]!=0){
             if (i!=j)
                 arr[j]=arr[i];
             --j;
