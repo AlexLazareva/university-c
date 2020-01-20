@@ -1,37 +1,42 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include<conio.h>
-#define PROMPT ':'
 
 int main() {
     float a,b,rez;
     char oper;
+    int answer;
 
-    while (putch(PROMPT), scanf("%f%c%f", &a, &oper, &b) !=EOF)
-    {
-        switch (oper)
-        {
-        case '+':
-            rez=a+b;
-            break;
+    printf("Enter 0 or 1: ");
+    scanf("%i", &answer);
 
-        case '-':
-            rez=a-b;
-            break;
+    while (answer == 1) {
+            scanf("%f%c%f", &a, &oper, &b);
+            switch (oper)
+            {
+            case '+':
+                rez=a+b;
+                break;
 
-        case '*':
-            rez=a*b;
-            break;
+            case '-':
+                rez=a-b;
+                break;
 
-        case '/':
-            rez=a/b;
-            break;
+            case '*':
+                rez=a*b;
+                break;
 
-        default:
-            printf("Error \n");
-            exit(1);
+            case '/':
+                rez=a/b;
+                break;
+
+            default:
+                printf("Error \n");
+                exit(1);
+            }
+            printf("Result is: %f\n", rez);
+            printf("Continue? 1 - yes, 0 - no: ");
+            scanf("%i", &answer);
         }
-        printf("Result is: %f\n", rez);
-        exit(0);
     }
-}
+

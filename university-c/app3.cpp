@@ -14,9 +14,10 @@ const int size = 10;
  double sum;
  double min;
  int i,j;
+ double value;
 
 // формирование массива
- for (i = 0; i < size; i++){
+ for (int i = 0; i < size; i++){
     cout << "arr[" << i << "]=";
     cin >> arr[i];
  }
@@ -24,17 +25,17 @@ const int size = 10;
 // эхо-печать массива
 cout << "Entered array is" << endl;
 
- for (i=0; i < size; i++){
+ for (int i=0; i < size; i++){
     cout << i << " " << setprecision(3) << arr[i] << endl;
  }
 
 // поиск минимального элемента
-    for (i=0, min=arr[0]; i<size; i++)
+    for (int i=0, min=arr[0]; i<size; i++)
         if (arr[i] < min)
             min = arr[i];
 
 // поиск первого положительного элемента
-    for (i=0; i < size && arr[i] <= 0; i++);
+    for (int i=0; i < size && arr[i] <= 0; i++);
     sum = 0; // если нет вообще положительных элементов
 
 //поиск последнего положительного элемента
@@ -54,7 +55,7 @@ cout << "Entered array is" << endl;
             --j;
         }
     }
-    for (i=0;i<=j;i++) // заполним начало нулями
+    for (int i=0;i<=j;i++) // заполним начало нулями
         arr[i]=0;
 
 // печать нового массива
