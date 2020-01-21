@@ -10,58 +10,53 @@ using namespace std;
 int main (){
 
 const int size = 5;
- double arr[size];
- double sum;
- double min;
- double minI, maxI;
+ double arr[size] = {0};
+ double sum = 0;
+ double min = 0;
+ double minI = 0, maxI = 0;
  int i,j;
 
-// формирование массива
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
  for (int n = 0; n < size; n++){
     cout << "arr[" << n << "]=";
     cin >> arr[n];
  }
 
-// эхо-печать массива
+// пїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 cout << "Entered array is" << endl;
 
  for (int n = 0; n < size; n++){
     cout << n << " " << arr[n] << endl;
  }
 
-// поиск минимального элемента
-    for (int n = 0, min = arr[0]; n < size; n++)
-    {
-        cout << "in cicle: " << n << ":" << fixed << min << endl;
-        if (arr[n] < min)
-            min = arr[n];
-    }
+// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+min = arr[0];
 
-cout << "min: " << min << endl;
-// поиск первого положительного элемента
+for (int n = 0; n < size; n++) {
+    if (arr[n] < min)
+        min = arr[n];
+}
+
+// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     for (int n = 0; n < size; n++) {
         if(arr[n] > 0) {
             minI = n;
             break;
         }
     }
-    cout << "minI: " << minI << endl;
-
-
-   for (int n = 0, maxI = arr[0]; n < size; n++) {
+maxI = arr[0];
+   for (int n = 0; n < size; n++) {
         if (arr[n] > 0) {
             maxI = n;
-            break;
         }
-
    }
-   cout << "maxI: "<< maxI << endl;
 
-   /*for (int n = minI + 1; n < maxI; n++) {
-        sum += arr[n];
-    }*/
 
-// печать нового массива
+for (int n = minI + 1; n < maxI; n++) {
+    sum += arr[n];
+}
+
+// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     cout << endl;
     cout << "New array" << endl;
 
