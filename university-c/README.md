@@ -1,5 +1,5 @@
 # university-c
-laboratory works with C++
+laboratory works with C/C++
 
 ## Лабораторная работа №1.
 Простейшие программы на языке С
