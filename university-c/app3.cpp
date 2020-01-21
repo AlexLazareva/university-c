@@ -44,7 +44,7 @@ for (int n = 0; n < size; n++) {
             break;
         }
     }
-maxI = arr[0];
+
    for (int n = 0; n < size; n++) {
         if (arr[n] > 0) {
             maxI = n;
