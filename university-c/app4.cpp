@@ -83,13 +83,17 @@ void edit() {
             }
         }
 }
-void removeTeam() {
-        printf("Enter the team name for removing from teams's list: ");
+void removeTeamByName() {
+        printf("Enter the team name for removing from list: ");
         scanf("%s", &search[0].d);
 
     for (i = 0; i <= mount - 1; i++) {
         if (!strcmp(a[i].name, search[0].d)){
-            a[i].name == search[0].notValue;
+            // TODO оптимизировать удаление всей записи
+            strcpy(a[i].name, search[0].notValue);
+            strcpy(a[i].city, search[0].notValue);
+            strcpy(a[i].teamlead, search[0].notValue);
+            strcpy(a[i].rate, search[0].notValue);
         }
 
         {
@@ -112,7 +116,7 @@ int main(){
                 case 1: addTeam(); break;
                 case 2: showTeams(); break;
                 case 3: edit(); break;
-                case 4: removeTeam(); break;
+                case 4: removeTeamByName(); break;
                 case 5: searchTeamByCity(); break;
             default:
                 printf("There is not such team\n");
