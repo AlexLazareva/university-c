@@ -68,6 +68,24 @@ void deleteEl(struct EL_SP *p, int n, char t_id[])
     }
 }
 
+int replaseEl (struct EL_SP *p, int k, char* str)
+{
+  struct EL_SP *pt;
+  int i;
+  pt = p;
+  for(i = 0; i < k; i++)
+  {
+    if(pt->nextElement != NULL)
+      pt = pt->nextElement;
+    else {
+      printf("..."); // превышение количества элементов списка
+      return(-1);
+    }
+  }
+  strncpy(pt->id,str,MAXLENGTH);
+  return(0);
+}
+
 main()
 {
     setlocale(LC_CTYPE, "rus");
